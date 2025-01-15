@@ -5,13 +5,13 @@
 #include <addons/RTDBHelper.h>
 
 #define WIFI_SSID "USFI Plant Station"
-#define WIFI_PASSWORD "11AhHkh0oD"
+#define WIFI_PASSWORD ""
 //#define WIFI_SSID "GlobeAtHome_1A76A"
-//#define WIFI_PASSWORD "4ABA4AD1"
+//#define WIFI_PASSWORD ""
 #define API_KEY "AIzaSyAwcRAd0RkyNvtAUNjDsRFPgVOgd4QhjUM"
 #define DATABASE_URL "https://iv-drip-monitoring-default-rtdb.asia-southeast1.firebasedatabase.app"
 #define USER_EMAIL "keshinzou.thesis.2025@gmail.com"
-#define USER_PASSWORD "thesis@project1001"
+#define USER_PASSWORD ""
 
 FirebaseData fbdo;
 FirebaseAuth auth;
