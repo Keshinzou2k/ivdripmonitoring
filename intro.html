@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Water Animation</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #0e0e0e;
+      overflow: hidden;
+      transition: opacity 1s ease-out;
+    }
+
+    body.fade-out {
+      opacity: 0;
+    }
+
+    .logo-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    .logo-container img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: auto;
+      z-index: 2;
+    }
+
+    .ripple {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #ff9900;
+      transform: translate(-50%, -50%) scale(0);
+      animation: ripple-animation 2s infinite ease-out;
+    }
+
+    .ripple:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .ripple:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    .ripple:nth-child(3) {
+      animation-delay: 1s;
+    }
+
+    @keyframes ripple-animation {
+      0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(2.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <div class="ripple"></div>
+    <div class="ripple"></div>
+    <div class="ripple"></div>
+  </div>
+  <script>
+    // Trigger fade-out and redirect
+    setTimeout(() => {
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 1000); // Match the fade-out duration (1s)
+    }, 3500); // Wait 5 seconds before starting fade-out
+  </script>
+</body>
+</html>
